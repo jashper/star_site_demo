@@ -20,9 +20,7 @@
     /* font-size*/
     font-size: 62.5%;
 }
-html, body {
-    overflow-x: hidden;
-}
+
 body {
     background-color: var(--pg-bg);
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
