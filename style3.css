@@ -20,13 +20,13 @@
     /* font-size*/
     font-size: 62.5%;
 }
-html, body {
+/* html, body {
     contain: paint;
-/*     overflow-x: hidden;
-    overflow : hidden; */
-}
+    overflow-x: hidden;
+    overflow : hidden;
+} */
 
-/* -webkit-scrollbar { display: none; } */
+-webkit-scrollbar { display: none; }
 
 body {
     background-color: var(--pg-bg);
