@@ -75,7 +75,8 @@ body {
 
 
 /* 4. set image sizing w-100 */
-.intro .kv_content  img,
+.btn img,
+.intro .kv_content img,
 .intro .kv_bg img ,
 .detail_content img,
 .mission_bg_t img,
@@ -86,14 +87,10 @@ body {
     vertical-align: bottom;
 }
 
-.intro .kv_bg img {
-    width: 110%;
-}
-
 /* set btn */
 .btn {
     padding-top: 100px;
-    width: 100%;
+    width: 60%;
     margin: auto;
 }
 
@@ -160,8 +157,8 @@ body {
     position: sticky;
     position: -webkit-sticky; */
     width: 100%;
-    padding-top: 10px;
 }
+
 
 /* .intro .kv-header {
    padding-left: 4vw;
@@ -175,8 +172,9 @@ body {
 }
 
 .intro .kv_bg  {
+    /* width: 100%; */
     z-index: -1;
-    margin-top: 120px;
+    margin-top:12vh;
     position: absolute;
     vertical-align: bottom;
 }
@@ -208,7 +206,7 @@ body {
     z-index : 2;
     position: relative;
     width: 100%;
-    margin-top: 120px;  
+    margin-top: 7vh;  
     background-color: #fff;  
 }
 
@@ -568,10 +566,20 @@ body {
 /* Tablet */
 @media screen and (min-width: 768px) {
 /* test */
+.intro {
+    margin-top: 12vh;
+}
+.details {
+    margin-top: 21vh;
+}
+
+.intro .kv_bg {
+    margin-top: 36vh ;
+}
     .detail_content::before {
         top: -20%;
         background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_RocketCloudWhite_repeat.png);
-        background-position: 0% top;
+
     }
 /* test  end*/
 
@@ -591,11 +599,11 @@ body {
     }
 
     /* set btn */
-    .btn {
+    /* .btn img {
         padding-top: 100px;
-        width: 80%;
+        width: 10%;
         margin: auto;
-    }
+    } */
 
 /* —————————————————————————— */
 /* end */  
@@ -689,9 +697,7 @@ body {
     left: 45%;
 }
 
-
-
-    
+   
     
 }
 
