@@ -20,13 +20,12 @@
     /* font-size*/
     font-size: 62.5%;
 }
-/* html, body {
-    contain: paint;
-    overflow-x: hidden;
-    overflow : hidden;
-} */
 
--webkit-scrollbar { display: none; }
+/* —————————————————————————— */
+
+/* html, body {
+    overflow-x: hidden;
+} */
 
 body {
     background-color: var(--pg-bg);
@@ -34,6 +33,7 @@ body {
 }
 
 /* Global Settings*/
+/* —————————————————————————— */
 
 /*1.set center */
 .mw-1200 {
@@ -47,56 +47,84 @@ body {
 }
 
 /* 2.set column*/
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;  
+.kv_box .row .col,
+.detail_box .row .col {
+    float: left;
 }
 
-[class *= "col-"] {
-    z-index: 1;
-    padding-left : 10px;
-    padding-right: 10px;
-    box-sizing: border-box 
+.kv_box .row::after,  
+.detail_box .row::after {
+   content: "";
+   display: block;
+   clear: left;
 }
 
-/*grid settings: xs */
-.col-xs-2 { width: 50%;}
+.kv_box .row .col-xs-2 {
+    width: 50%;
+}
+
+.detail_box .row .col-xs-1 {
+    width: 100%;
+}
+
+/* 3.set content  */
+.kv_box .row .item,
+.detail_box .row .item{
+    width: 100%;
+}
 
 
-/* image sizing w-100 */
-.kv_content  img,
-.intro .kv-bg img ,
-.intro .kv-header img,
+/* 4. set image sizing w-100 */
+.intro .kv_content  img,
+.intro .kv_bg img ,
 .detail_content img,
+.mission_bg_t img,
+.mission_bg_bt img,
 .mission_content img,
-.notices img {
+.notice_bg img {
     width: 100%;
     vertical-align: bottom;
 }
 
+.intro .kv_bg img {
+    width: 110%;
+}
+
+/* set btn */
+.btn {
+    padding-top: 100px;
+    width: 100%;
+    margin: auto;
+}
+
+
+/* set z-index*/
 .missions, .notices, .footer {
     z-index: 1;
     position: relative;
 }
 
-.missions, .notices {
+/* correction */
+/* .missions, .notices {
     background-color: #5848a1;
-}
+} */
 
+/* end */
+/* —————————————————————————— */
 
 
 
 /* header */
 /* —————————————————————————— */
 .header {
+    
     background-color: #F36518;
     top  : 0;
     left : 0;
     right: 0;
-    z-index : 4;
+    z-index : 3;
     position: fixed;
+    /* padding-right: 20px; */
 }
 
 .header .main-logo {
@@ -125,29 +153,34 @@ body {
 
 /* section 1 */
 /* —————————————————————————— */
+
 .intro {
-    top: 0;
+    /* top: 0;
     z-index : 1;
     position: sticky;
+    position: -webkit-sticky; */
     width: 100%;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 /* .intro .kv-header {
    padding-left: 4vw;
 } */
 
-.intro .kv-bg {
+/* correction */
+.intro .kv_bg {
     top : 0;
     left: 0;
     position: absolute;
 }
 
-.intro .kv-bg  {
-    margin-top: 12vh;
+.intro .kv_bg  {
+    z-index: -1;
+    margin-top: 120px;
     position: absolute;
     vertical-align: bottom;
 }
+
 
 
 /* 備用背景圖片 */
@@ -175,7 +208,7 @@ body {
     z-index : 2;
     position: relative;
     width: 100%;
-    margin-top: 12vh;  
+    margin-top: 120px;  
     background-color: #fff;  
 }
 
@@ -228,6 +261,7 @@ body {
 }
 
 .details::after {
+    bottom: -290px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_TopClould_repeat.png);
 }
 
@@ -421,27 +455,43 @@ body {
     border-bottom: 1px solid #fff;
 }
 
+
 /* Mobile Phone <= 375px */
 @media screen and (max-width: 375px) {
 
-    .header .logo img {
-        width: 50%;
-        margin: auto;
+    .header .logo img{
+        width: 70%;
     }
 
-    .header .logo {
-        margin: auto;
-    }
 
-    .kv-header .kv_content,
-    .notice_content, 
-    .detail_content, 
-    .missions_content,
-    .footer_content
-    {
+    .intro .kv_content,
+    .details .detail_content,
+    .missions .mission_bg_t,
+    .missions .mission_bg_b,
+    .missions .mission_content {   
         margin: auto;
         width: 90%;
     }
+
+
+    .btn {
+        padding-top: 50px;
+        margin: auto;
+        width: 100%;
+    }
+
+
+/* .mission_content,
+.footer_content {
+    width: 90%;
+    margin: auto;
+    vertical-align: bottom;
+} */
+
+.footer_content {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
 
     .section .mission_content {
         top: 3%;
@@ -453,19 +503,29 @@ body {
 
 /* Mobile Phone */
 @media screen and (max-width: 767px) {
-
+    .header {
+        z-index: 3;
+        position: relative;
+    }
     .header .logo {
         text-align: center;
     }
 
     .main-nav {
-        z-index: 3;
+        width: 100%;
         position: fixed;
         bottom: 0;
         right : 0;
         left  : 0;
         margin: auto;
     }
+
+    /* .main-nav ul {
+        width: 50%;
+    }
+    .main-nav li {
+        width: 33.33333%;
+    } */
 
     .main-nav li {
         flex-grow: 1;
@@ -507,13 +567,38 @@ body {
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-    /* test */
+/* test */
     .detail_content::before {
         top: -20%;
         background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_RocketCloudWhite_repeat.png);
         background-position: 0% top;
     }
-    /* ____ */
+/* test  end*/
+
+    /* set column */
+    .kv_box .row .col-lg-5{
+        width: 20%;
+    }
+    
+    .detail_box .row .col-lg-2{
+        width: 50%;
+    }
+
+    .kv_box .row .col:nth-child(3),
+    .kv_box .row .col:nth-child(4) {
+        position: relative;
+        left: 20%
+    }
+
+    /* set btn */
+    .btn {
+        padding-top: 100px;
+        width: 80%;
+        margin: auto;
+    }
+
+/* —————————————————————————— */
+/* end */  
 
     .header .logo img {
         width: 55%;
@@ -603,6 +688,8 @@ body {
     top : 75%;
     left: 45%;
 }
+
+
 
     
     
