@@ -23,9 +23,12 @@
 /* —————————————————————————— */
 
 html {
-    overflow-x: hidden ;
     background-color: var(--pg-bg);
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
+}
+
+body {
+    overflow-x: hidden ;
 }
 
 .cover {
