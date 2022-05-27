@@ -1,10 +1,9 @@
-/* body {
-    outline: 2px solid red;
-} */
+
 
 :root {
     /* bg-color */
     --pg-bg: #5848a1;
+    --pg-bg-1: #fff;
 
     /* nav-bar sm-color */
     --hv-nav-bg-1 : #01a79b;
@@ -24,18 +23,25 @@
 /* —————————————————————————— */
 
 html {
-    overflow-x: hidden;
+    overflow-x: hidden ;
     background-color: var(--pg-bg);
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
 }
 
+.cover {
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    background-color: var(--pg-bg);
+    background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
 
+}
 
 
 /* Global Settings*/
 /* —————————————————————————— */
 
-/*1.set center */
+/*set center */
 .mw-1200 {
     max-width: 1200px;
     margin: auto;
@@ -46,8 +52,7 @@ html {
     margin: auto;
 }
 
-/* 2.set column*/
-
+/* set column*/
 .detail_box .row .col {
     float: left;
 }
@@ -62,62 +67,38 @@ html {
     width: 100%;
 }
 
-/* 3.set content  */
-
 .detail_box .row .item {
     width: 100%;
 }
 
-
-/* 4. set image sizing w-100 */
+/* set image sizing w-100 */
 .btn img,
 .intro .kv_content img,
 .intro .kv_bg img ,
 .detail_content img,
-.mission_bg_t img,
-.mission_bg_bt img,
-.mission_content img,
 .notice_bg img {
     width: 100%;
     vertical-align: bottom;
 }
 
-/* set btn */
+/* btn */
 .btn {
     z-index: 2;
-
     width: 80%;
     margin: auto;
     position: relative;
 }
 
+/*parent's z-index*/
 
-/* set z-index*/
-
-.details, .missions, .notices, .footer {
-    z-index: 1;
+/* .intro {
+    z-index: 2;
+} */
+.details{z-index: 3;}
+.missions, .notices, .footer {
+    z-index: 2;
     position: relative;
 }
-/* .details {
-    z-index: ;
-}
-.details::after {
-    z-index: 1;
-} */
-/* .missions {
-    z-index: 2;
-}
-.missions .mission_content .mission_bg_t {
-    z-index: -1;
-}
-.missions .mission_content {
-    z-index: 1;
-} */
-
-/* correction */
-/* .missions, .notices {
-    background-color: #5848a1;
-} */
 
 /* end */
 /* —————————————————————————— */
@@ -131,11 +112,11 @@ html {
     top  : 0;
     left : 0;
     right: 0;
-    z-index : 3;
+    z-index : 4;
     position: fixed;
 }
 
-.header .main-logo {
+.header .main_logo {
     margin: auto;
     display: flex;
     justify-content: center;
@@ -149,11 +130,11 @@ html {
     vertical-align: bottom;
 }
 
-.header .main-nav ul{
+.header .main_nav ul{
     display: flex;
 }
 
-.header .main-nav ul li a {
+.main_nav ul li a {
     color: #fff;
     text-decoration: none;
 }
@@ -162,55 +143,44 @@ html {
 /* section 1 */
 /* —————————————————————————— */
 
-section.intro {
-    top: 0; 
-    z-index: 2;
-    position: sticky !important;
+#st {
+    top: 0px; 
+    z-index: 1;
+    position: sticky;
     position: -webkit-sticky;
     position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
-} 
-
-.intro {margin-top: 1400px;}
-.sticky {
-    margin-top: -1400px;
 }
+/* section.intro { 
+    top: 0px; 
+    z-index: 2;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+}  */
 
-.sticky {
+.intro .sticky {
     height: 100%;
     position: relative;
-    padding-top: 50px;
 }
 
-.intro .kv_title {
-    z-index: 1;
-    top: 0;
+/* ===P1=== */
+/* .intro {margin-top: 650px;}
+.intro .sticky {margin-top: -650px;} */
+/* ======= */
+
+
+.intro .kv_content {
+    top: 50px;
     left: 0;
-    right: 0;
-    position: absolute;
+    position: relative;
 }
 
-.intro .kv_title picture {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.intro .kv_bg {
-    right: 0;
-    left: 0;
-    bottom: 50px;
-    margin: auto;
-    position: absolute;
-}
-.intro .kv_bg picture {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.kv_content .row .col {
+.kv_content .kv_title,
+.kv_box .row .col {
     z-index: 2;
     width: 100%;
     top: 0;
@@ -218,9 +188,14 @@ section.intro {
     right: 0;
     position: absolute;
 }
-.intro .kv_bg::after,
+
+.kv_box {
+    position: relative;
+}
+
+
 .intro .kv_title::after,
-.kv_content .row::after {
+.intro .kv_box .row::after {
     content: "";
     display: block;
     width: 100%;
@@ -229,25 +204,26 @@ section.intro {
 }
 
 .intro .kv_title::after {
-    padding-bottom: 26.666666%;
+    padding-bottom: 53.33333%;
 }
 
-.kv_box {
-    position: relative;
+
+.intro .kv_bg {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
 }
 
-.kv_box .col{
-    position:absolute;
+.intro .kv_title picture {
+    position: absolute;
 }
+
 
 .kv_box .col .item {
     width: 50%;
 }
-
-.kv_box .col .item img {
-    width: 100%;
-}
-
 
 .kv_box .row .col:nth-child(1){
     top: 0%;
@@ -277,6 +253,7 @@ section.intro {
 }
 
 .intro::after {
+    z-index: 1;
     height: 300px;
     bottom: -170px;
     background-repeat: repeat-x;
@@ -289,17 +266,16 @@ section.intro {
 /* section 2 */
 /* —————————————————————————— */
 .details {
-    z-index : 2;
     position: relative;
     width: 100%;
-    background-color: #fff;  
+    background-color: var(--pg-bg-1);  
 }
 
 .details::before,
 .details::after,
 .detail_bg::before,
 .detail_bg::after {
-    z-index: -1;
+    z-index: 1;
     content: "";
     display: block;
     position: absolute;
@@ -320,30 +296,28 @@ section.intro {
     background-size: 11% auto, 800px auto;
 } */
 
-.detail_bg::after {
+.details .detail_bg::after {
     top: -250px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_Rocket.png);
     background-repeat: no-repeat;
     background-size: 120px auto;
     background-position: center 0%;
-    /* background-color: red; */
 }
 
 .details::after {
-    bottom: -900px;
+    height: 300px;
+    bottom: -300px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_TopClould_repeat.png);
     background-repeat: repeat-x;
     background-size: 760px auto;
 }
 
-.detail_bg::before {
+.details .detail_bg::before {
     top: -120px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_RocketCloudWhite_repeat.png);
     background-repeat: repeat-x;
     background-size: 600px auto;
     background-position: center 0%;
-    /* background: red; */
-
 }
 
 .details .detail_content {
@@ -356,48 +330,30 @@ section.intro {
 
 /* section 3 */
 /* —————————————————————————— */
-.missions {
-    max-width: 1200px;
-    margin: auto;
-}
 
-.missions {
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-}
-
-.mission_content {
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-/* test area */
-/* ____________________ */
-
-.mission_content {
+/* .mission_title + mission_box*/
+.mission_content { 
     margin: auto;
     max-width: 1200px;
     top  : 3%;
     left : 0;
     right: 0;
     position: absolute;
-
 }
+
 .mission_bg_t,
 .mission_bg_b,
 .mission_title,
-.mission_content .row{
+.mission_box .row {
     width: 100%;
     position: relative;
 }
 
 
-.mission_bg_t::after,
-.mission_bg_b::after,
-.mission_title::after,
-.mission_content .row::after {
+.missions .mission_bg_t::after,
+.missions .mission_bg_b::after,
+.missions .mission_title::after,
+.missions .mission_box .row::after {
     content: "";
     display: block;
     width: 100%;
@@ -405,76 +361,70 @@ section.intro {
     padding-bottom: 700%;
 }
 
-.mission_bg_t::after {
+.missions .mission_bg_t::after {
     padding-bottom: 50.66666%;
 }
 
-.mission_title::after {
+.missions .mission_title::after {
     padding-bottom: 26.66666%;
 }
 
-.mission_title picture img,
-.mission_bg_t picture img,
-.mission_bg_b picture img {
+.missions .mission_title picture img,
+.missions .mission_bg_t picture img,
+.missions .mission_bg_b picture img,
+.missions .mission_box .item img {
     width: 100%;
     height: auto;
     position: absolute;
 }
 
-/* .mission_box .row {
-    top : 0;
-    left: 0;
-    position: absolute;
-} */
-
-
-.mission_box .row .col picture img {
+.mission_box .row .col .item img{
     width: 100%;
     z-index : 3;
-    bottom  : 0;
-    right   : 0;
+    bottom  : 0%;
+    right   : 0%;
     position: absolute;
     margin: auto;
     transition: .3s ease-in;
    
 }
 
-.mission_box .row .col:nth-child(1) picture img {
+.mission_box .row .col:nth-child(1) .item img {
     top : -85%;
     left: 0%;
 }
 
-.mission_box .row .col:nth-child(2) picture img{
+.mission_box .row .col:nth-child(2) .item img{
     top : -56.5%;
     left: 0%;
 }
 
-.mission_box .row .col:nth-child(3) picture img {
+.mission_box .row .col:nth-child(3) .item img {
     top : -28%;
     left: 0%;
 }
 
-.mission_box .row .col:nth-child(4) picture img {
+.mission_box .row .col:nth-child(4) .item img {
     top : .5%;
     left: 0%;
 }
 
-.mission_box .row .col:nth-child(5) picture img {
+.mission_box .row .col:nth-child(5) .item img {
     top : 29%;
     left: 0%;
 }
 
-.mission_box .row .col:nth-child(6) picture img {
+.mission_box .row .col:nth-child(6) .item img {
     top : 57.5%;
     left: 0%;
 }
-.mission_box .row .col:nth-child(7) picture img {
+.mission_box .row .col:nth-child(7) .item img {
     top : 86.5%;
     left: 0%;
 }
 
-.mission_content .mission_box .col picture img,
-.mission_content .mission_box .col:last-child picture img {
+.mission_box .col .item img,
+.mission_box .col:last-child .item img {
     display: block;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_BgGreen-Normal.png);
     background-size    : 100% auto;
@@ -482,27 +432,24 @@ section.intro {
     background-repeat  : no-repeat;
 }
 
-.mission_content .mission_box .col:hover picture img,
-.mission_content .mission_box .col:last-child:hover picture img {
+.mission_box .col:hover .item img,
+.mission_box .col:last-child:hover .item img {
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_BgGreen-Hover.png);
     background-size    : 100% auto;
     background-position: 0%   0%;
     background-repeat  : no-repeat;
-    bottom: 5px;
+    bottom:5px;
     right: 5px;
 }
 
-.mission_content .mission_box .col:last-child picture img {
+.mission_box .col:last-child .item img {
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_BgPurple-Normal.png);
 }
 
-.mission_content .mission_box .col:last-child:hover picture img {
+.mission_box .col:last-child:hover .item img {
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_BgPurple-Hover.png);
 }
 
-
-/* notices */
-/* —————————————————————————— */
 
 /* footer */
 /* —————————————————————————— */
@@ -540,10 +487,14 @@ section.intro {
 /* Mobile Phone <= 375px */
 @media screen and (max-width: 375px) {
 
+    /* ===P1=== */
+    /* .intro {margin-top: 520px;}
+    .intro .sticky {margin-top: -520px;} */
+    /* ====== */
+
     .header .logo img{
         width: 60%;
     }
-
 
     .intro .kv_content,
     .details .detail_content,
@@ -555,19 +506,16 @@ section.intro {
     }
 
     .btn {
+        padding-top: 30px;
         margin: auto;
         width: 90%;
     }
 
-    /* .intro {margin-top: 100px;}
-    .sticky {
-        margin-top: -100px;
-    } */
     .details::after {
-        background-size: 190px auto;
+        background-size: 380px auto;
     }
 
-    .detail_bg::after {
+    .details .detail_bg::after {
         top: -130px;
         background-size: 70px auto;
     }
@@ -577,64 +525,73 @@ section.intro {
         white-space: nowrap;
     }
 
-    .mission_title {
+    .missions .mission_content .mission_title {
         top: 20px;
         position: relative;
     }
 
 }
 
+@media screen and (min-width:376px) and (max-width: 767px) {
+    /* ===P1=== */
+    /* .intro {margin-top: 600px;}
+    .intro .sticky {margin-top: -600px;} */
+    /* ======= */
+
+}
 /* Mobile Phone */
 @media screen and (max-width: 767px) {
 
-    .main-logo {
+    .header .main_logo {
         top: 0;
-        position: sticky;
+        position: fixed;
         border-bottom: 5px solid #fff;
+        background-color: var(--hv-left-nav-bg);
     }
-    .header .logo {
+
+    .header .main_logo .logo {
         text-align: center;
     }
 
-    .main-nav {
-        position: fixed;
+    .header .main_nav {
         bottom: 0;
         right : 0;
         left  : 0;
+        position: fixed;
     }
 
-    .main-nav li {
+    .main_nav li {
         flex-grow: 1;
         padding: 10px 10px;
         aspect-ratio: 10/3;     
     }
 
-    .main-nav ul li a {
+    .main_nav ul li a {
         font-size: 0;
         height: 0;
     }
 
-    .main-nav ul li + li {
+    .main_nav ul li + li {
         border-left: 1px solid #fff;
     }
    
-    .main-nav ul li:nth-child(1) {
+    .main_nav ul li:nth-child(1) {
         background: var(--hv-nav-bg-1) url(./切版用圖-20220520T072434Z-001/切版用圖/Fixed_Button_Description.png) no-repeat center;
         background-size: 75% auto;
    
     }
-    .main-nav ul li:nth-child(2){
+    .main_nav ul li:nth-child(2){
         background: var(--hv-nav-bg-1) url(./切版用圖-20220520T072434Z-001/切版用圖/Fixed_Button_Mission.png) no-repeat center;
         background-size: 75% auto;
         
     }
     
-    .main-nav ul li:nth-child(3){
+    .main_nav ul li:nth-child(3){
         background: var(--hv-nav-bg-1) url(./切版用圖-20220520T072434Z-001/切版用圖/Fixed_Button_Notes.png) no-repeat center;
         background-size: 75% auto;
     }
 
-    .main-nav ul li:hover {
+    .main_nav ul li:hover {
         background-color: #FF5E79;
     }
 
@@ -643,79 +600,46 @@ section.intro {
 
 /* Tablet */
 @media screen and (min-width: 768px) {
-/* test */
-    /* .detail_content::before {
-        background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_RocketCloudWhite_repeat.png);
 
-    } */
-/* test  end*/
-
-
-    /* set column */
-    /* .kv_box .row .col-lg-5{
-        width: 20%;
+    .btn {
+        width: 100%;
     }
-    
-    .detail_box .row .col-lg-2{
-        width: 50%;
-    }
-
-    .kv_box .row .col:nth-child(3),
-    .kv_box .row .col:nth-child(4) {
-        position: relative;
-        left: 20%
-    } */
-
-    /* set btn */
-
-/* end */ 
-
-/* —————————————————————————— */
  
 
     .header .logo img {
         width: 55%;
     }
     
-    .main-nav ul li a{
+    .main_nav ul li a{
         font-size: clamp(1.2rem, 1.5rem, 1.8rem); 
         white-space: nowrap;
         display: block;
         padding: 10px 25px;
     }
 
-    .main-nav ul li:hover {
+    .main_nav ul li:hover {
         border-radius: 25px;
         background-color: var(--hv-left-nav-txt);
     }
     
-    .main-nav ul li:hover  a{
+    .main_nav ul li:hover  a{
         color: var(--hv-left-nav-bg);
     }
 
 /* section 1 */
-    .intro {margin-top: 1400px;}
-    .sticky {
-        margin-top: -1400px;
-    }
-    /* .kv_content .row .col::after, */
+    /* ===P1=== */
+    /* .intro {margin-top: 1400px;}
+    .intro .sticky {margin-top:-1400px;} */
+    /* ====== */   
+
     .intro .kv_bg::after,
-    .kv_content .row::after {
+    .intro .kv_box .row::after {
         padding-bottom: 38%;
-    }
-    
-    .intro .kv_title::after {
-        padding-bottom: 23.33333%;
     }
 
     .kv_box .col .item {
         width: 20%;
     }
-    
-    .kv_box .col .item img {
-        width: 100%;
-    }
-    
     
     .kv_box .row .col:nth-child(1){
         top: 0%;
@@ -738,7 +662,7 @@ section.intro {
         left: 58%;
     }
 
-    .row .col {
+    .kv_box .row .col {
         animation-name: anim1;
         animation-duration: 1.5s;
         animation-timing-function: ease-in;
@@ -747,8 +671,8 @@ section.intro {
         animation-direction: alternate;
       }
 
-      .row .col:nth-child(3),
-      .row .col:nth-child(4) {
+      .kv_box .row .col:nth-child(3),
+      .kv_box .row .col:nth-child(4) {
         animation-name: anim2;
         animation-delay: 0s;
       }
@@ -766,64 +690,64 @@ section.intro {
 
 
 /* section 3*/
-    .mission_bg_b::after,
-    .mission_content .row::after {
+    .missions .mission_bg_b::after,
+    .missions .mission_box .row::after {
         padding-bottom: 125%;
     }
 
-    .mission_bg_t::after {
+    .missions .mission_bg_t::after {
         padding-bottom: 29.16666%;
     }
 
-    .mission_title::after {
+    .missions .mission_title::after {
         padding-bottom: 21.42857%;
     }
 
-    .mission_title {
+    .missions .mission_title {
         top: 50px;
         position: relative;
     }
 
 
 /* test */
-    .mission_box .row .col picture img {
+    .mission_box .row .col .item img{
         width: 35%;
     }
 
-    .mission_box .row .col:nth-child(1) picture img {
+    .mission_box .row .col:nth-child(1) .item img {
         top : -60%;
         left: -40%;
     }
 
-    .mission_box .row .col:nth-child(2) picture img{
+    .mission_box .row .col:nth-child(2) .item img {
         top : -53%;
         left: 50%;
     }
 
-    .mission_box .row .col:nth-child(3) picture img {
+    .mission_box .row .col:nth-child(3) .item img{
         width: 30%;
         top : 0%;
         left: 70%;
     }
 
-    .mission_box .row .col:nth-child(4) picture img {
+    .mission_box .row .col:nth-child(4) .item img {
         width: 30%;
         top : 10%;
         left: -3%;
     }
 
-    .mission_box .row .col:nth-child(5) picture img {
+    .mission_box .row .col:nth-child(5) .item img {
         width: 30%;
         top : 20%;
         left: -78%;
     }
 
-    .mission_box .row .col:nth-child(6) picture img {
+    .mission_box .row .col:nth-child(6) .item img {
         top : 70%;
         left: -55%;
     }
 
-    .mission_box .row .col:nth-child(7) picture img {
+    .mission_box .row .col:nth-child(7) .item img {
         width: 42%;
         top : 75%;
         left: 45%;
