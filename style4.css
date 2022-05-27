@@ -23,21 +23,23 @@
 /* —————————————————————————— */
 
 /* html {
+    overflow-x: hidden;
 
 } */
 
 body {
-    overflow-x: hidden ;
+    overflow-x: hidden;
     background-color: var(--pg-bg);
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
 }
 
 .cover {
     width: 100%;
-    z-index: 3;
-    position: relative;
     background-color: var(--pg-bg);
+    background-size: contain, cover; 
+    background-position: center;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
+    overflow: hidden;
 
 }
 
@@ -77,7 +79,8 @@ body {
 
 /* set image sizing w-100 */
 .btn img,
-.intro .kv_content img,
+.intro .kv_content .kv_header img,
+.intro .kv_content .kv_box img,
 .intro .kv_bg img ,
 .detail_content img,
 .notice_bg img {
@@ -112,6 +115,7 @@ body {
 /* header */
 /* —————————————————————————— */
 .header {
+    overflow: hidden;
     background-color: #F36518;
     top  : 0;
     left : 0;
@@ -156,7 +160,7 @@ body {
     position: -ms-sticky;
     position: -o-sticky;
 }
-/* section.intro { 
+/* section .intro { 
     top: 0px; 
     z-index: 2;
     position: sticky;
@@ -167,7 +171,6 @@ body {
 }  */
 
 .intro .sticky {
-    height: 100%;
     position: relative;
 }
 
@@ -186,7 +189,6 @@ body {
 .kv_content .kv_title,
 .kv_box .row .col {
     z-index: 2;
-    width: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -213,10 +215,7 @@ body {
 
 
 .intro .kv_bg {
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
+    bottom: 50px;
     position: absolute;
 }
 
@@ -225,9 +224,14 @@ body {
 }
 
 
+.kv_box .col {
+    width: 100%;
+}
+
 .kv_box .col .item {
     width: 50%;
 }
+
 
 .kv_box .row .col:nth-child(1){
     top: 0%;
@@ -235,6 +239,7 @@ body {
 }
 
 .kv_box .row .col:nth-child(2) {
+
     top: 0%;
     left: 50%;
 }
@@ -461,6 +466,7 @@ body {
     text-align: center;
     font-size: 1.4rem;
     padding: 30px 10px 50px 10px;
+    box-sizing: border-box;
     /* margin: 0 0 10px 0; */
     background-color: var(--ft-bg-1);
 
