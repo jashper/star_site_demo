@@ -225,10 +225,6 @@ body {
 
 
 .kv_box .col {
-    width: 100%;
-}
-
-.kv_box .col .item {
     width: 50%;
 }
 
@@ -647,7 +643,7 @@ body {
         padding-bottom: 38%;
     }
 
-    .kv_box .col .item {
+    .kv_box .col {
         width: 20%;
     }
     
