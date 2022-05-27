@@ -22,13 +22,14 @@
 
 /* —————————————————————————— */
 
-html {
-    background-color: var(--pg-bg);
-    background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
-}
+/* html {
+
+} */
 
 body {
     overflow-x: hidden ;
+    background-color: var(--pg-bg);
+    background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
 }
 
 .cover {
@@ -239,12 +240,12 @@ body {
 }
 
 .kv_box .row .col:nth-child(3){
-    top: 40%;
+    top: 30%;
     left: 0%;
 }
 
 .kv_box .row .col:nth-child(4){
-    top: 40%;
+    top: 30%;
     left: 50%;
 }
 
@@ -284,7 +285,7 @@ body {
     position: absolute;
     z-index:1;
     width: 100%;
-    height: 900px;
+    height: 760px;
     background-repeat: repeat-x;
     background-size: 760px auto;
 }
@@ -690,7 +691,10 @@ body {
         100% {top:80px;}
       }
 
-
+      .details .detail_bg::after  {
+          top: -200px;
+          background-size: 100px auto;
+      }
 
 /* section 3*/
     .missions .mission_bg_b::after,
