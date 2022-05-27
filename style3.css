@@ -23,14 +23,14 @@
 
 /* —————————————————————————— */
 
-/* html, body {
+html {
     overflow-x: hidden;
-} */
-
-body {
     background-color: var(--pg-bg);
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
 }
+
+
+
 
 /* Global Settings*/
 /* —————————————————————————— */
@@ -47,29 +47,24 @@ body {
 }
 
 /* 2.set column*/
-/* .kv_box .row .col, */
+
 .detail_box .row .col {
     float: left;
 }
 
-/* .kv_box .row::after,   */
 .detail_box .row::after {
    content: "";
    display: block;
    clear: left;
 }
 
-/* .kv_box .row .col-xs-2 {
-    width: 50%;
-} */
-
 .detail_box .row .col-xs-1 {
     width: 100%;
 }
 
 /* 3.set content  */
-/* .kv_box .row .item, */
-.detail_box .row .item{
+
+.detail_box .row .item {
     width: 100%;
 }
 
@@ -99,7 +94,7 @@ body {
 
 /* set z-index*/
 
-.missions, .notices, .footer {
+.details, .missions, .notices, .footer {
     z-index: 1;
     position: relative;
 }
@@ -167,17 +162,27 @@ body {
 /* section 1 */
 /* —————————————————————————— */
 
-.intro {
-    top: 0;
-    z-index : 1;
-    position: sticky;
+section.intro {
+    top: 0; 
+    z-index: 2;
+    position: sticky !important;
     position: -webkit-sticky;
-    width: 100%;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+} 
+
+.intro {margin-top: 1400px;}
+.sticky {
+    margin-top: -1400px;
 }
 
-.intro {
+.sticky {
+    height: 100%;
     position: relative;
+    padding-top: 50px;
 }
+
 .intro .kv_title {
     z-index: 1;
     top: 0;
@@ -268,7 +273,6 @@ body {
     content: "";
     display: block;
     position: absolute;
-    z-index:1;
     width: 100%;
 }
 
@@ -288,7 +292,6 @@ body {
     z-index : 2;
     position: relative;
     width: 100%;
-    /* margin-top: 90px;   */
     background-color: #fff;  
 }
 
@@ -302,7 +305,7 @@ body {
     position: absolute;
     z-index:1;
     width: 100%;
-    height: 300px;
+    height: 900px;
     background-repeat: repeat-x;
     background-size: 760px auto;
 }
@@ -327,7 +330,7 @@ body {
 }
 
 .details::after {
-    bottom: -290px;
+    bottom: -900px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_TopClould_repeat.png);
     background-repeat: repeat-x;
     background-size: 760px auto;
@@ -360,7 +363,7 @@ body {
 
 .missions {
     max-width: 1200px;
-    /* width: 100%; */
+    width: 100%;
     margin: auto;
 }
 
@@ -530,7 +533,7 @@ body {
 
 
 .footer .footer_content {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--hv-left-nav-txt);
 }
 
 
@@ -538,7 +541,7 @@ body {
 @media screen and (max-width: 375px) {
 
     .header .logo img{
-        width: 70%;
+        width: 60%;
     }
 
 
@@ -551,25 +554,23 @@ body {
         width: 90%;
     }
 
-
     .btn {
-        padding-top: 50px;
         margin: auto;
-        width: 100%;
+        width: 90%;
+    }
+
+    /* .intro {margin-top: 100px;}
+    .sticky {
+        margin-top: -100px;
+    } */
+    .details::after {
+        background-size: 190px auto;
     }
 
     .detail_bg::after {
         top: -130px;
         background-size: 70px auto;
     }
-
-
-/* .mission_content,
-.footer_content {
-    width: 90%;
-    margin: auto;
-    vertical-align: bottom;
-} */
 
     .footer_content {
         font-size: 1.2rem;
@@ -585,29 +586,22 @@ body {
 
 /* Mobile Phone */
 @media screen and (max-width: 767px) {
-    .header {
-        z-index: 3;
-        position: relative;
+
+    .main-logo {
+        top: 0;
+        position: sticky;
+        border-bottom: 5px solid #fff;
     }
     .header .logo {
         text-align: center;
     }
 
     .main-nav {
-        width: 100%;
         position: fixed;
         bottom: 0;
         right : 0;
         left  : 0;
-        margin: auto;
     }
-
-    /* .main-nav ul {
-        width: 50%;
-    }
-    .main-nav li {
-        width: 33.33333%;
-    } */
 
     .main-nav li {
         flex-grow: 1;
@@ -700,10 +694,10 @@ body {
     }
 
 /* section 1 */
-    .intro{
-        margin-top: 60px;
+    .intro {margin-top: 1400px;}
+    .sticky {
+        margin-top: -1400px;
     }
-
     /* .kv_content .row .col::after, */
     .intro .kv_bg::after,
     .kv_content .row::after {
