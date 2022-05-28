@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;700&display=swap');
+
 
 :root {
-/* bg-color */
+    /* bg-color */
     --pg-bg: #5848a1;
     --pg-bg-1: #fff;
 
@@ -10,52 +10,25 @@
     --hv-nav-bg-2 : #FF5E79;
 
     /* nav-bar lg-color */ 
-    --hv-nav-bg-3: #F36518;
+    --hv-left-nav-txt : #fff;
+    --hv-left-nav-bg: #F36518;
 
     /* footer-color */
     --ft-bg-1: #717171;
 
-/*font*/
-    /* body-font-size*/
+    /* font-size*/
     font-size: 62.5%;
-
-    /*font-size*/
-    --nav-mnm:1.2rem;
-    --nav-standard:1.5rem;
-    --nav-mxm: 1.8rem;
-
-    --title-xs: 2.8rem;
-    --title-md: 3rem;
-    --title-lg: 3.5rem;
-
-    --sub-title-xs: 2rem;
-    --sub-title-md: 2.5rem;
-    --sub-title-lg: 3rem;
-
-    --body-xs: 1.2rem;
-    --body-md: 1.2rem;
-    --body-lg: 1.4rem;
-
-    /* font-color */
-    --ft-color-1: #ff0;
-    --ft-color-2: #fff;
-
-    /* link-color */
-    --link-color-1:#fff;
-
-    /*line-height*/
-    --lh-1-xs: 1.2;
-    --lh-1-lg: 1.5;
-
 }
 
 /* —————————————————————————— */
-/* ===P1=== */
-/* html {overflow-x: hidden;} */
+
+/* html {
+    overflow-x: hidden;
+
+} */
 
 body {
     overflow-x: hidden;
-    font-family: 'Noto Serif TC', serif;
     background-color: var(--pg-bg);
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
 }
@@ -67,6 +40,7 @@ body {
     background-position: center;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Body_BgPoint_repeat.png);
     overflow: hidden;
+
 }
 
 
@@ -84,9 +58,9 @@ body {
     margin: auto;
 }
 
-/*link  */
+/*hyperlink  */
 a {
-    color: var(--link-color-1);
+    color: #fff;
     text-decoration: none;
 }
 
@@ -129,7 +103,7 @@ a {
 /* —————————————————————————— */
 .header {
     overflow: hidden;
-    background-color: var(--hv-nav-bg-3);
+    background-color: #F36518;
     top  : 0;
     left : 0;
     right: 0;
@@ -169,6 +143,15 @@ a {
     position: -ms-sticky;
     position: -o-sticky;
 }
+/* section .intro { 
+    top: 0px; 
+    z-index: 2;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+}  */
 
 .intro .sticky {
     position: relative;
@@ -195,11 +178,6 @@ a {
     position: absolute;
 }
 
-.intro .kv_bg picture {
-    bottom: 50px;
-    position: absolute;
-}
-
 .kv_content .kv_box {
     width: 100%;
     position: relative;
@@ -216,6 +194,12 @@ a {
 
 .intro .kv_title::after {
     padding-bottom: 53.33333%;
+}
+
+
+.intro .kv_bg {
+    bottom: 50px;
+    position: absolute;
 }
 
 .intro .kv_title picture {
@@ -258,7 +242,7 @@ a {
 .intro::after {
     z-index: 1;
     height: 300px;
-    bottom: -180px;
+    bottom: -170px;
     background-repeat: repeat-x;
     background-size: 400px auto;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_RocketCloud_repeat.png);
@@ -280,14 +264,12 @@ a {
     margin-bottom: 20px;
 }
 
-
 /* set column*/
 .detail_box .row .col {
     float: left;
 }
 
-.detail_box .row::after,
-.footer .footer_content::after {
+.detail_box .row::after {
    content: "";
    display: block;
    clear: left;
@@ -316,63 +298,37 @@ a {
     background-size: 760px auto;
 }
 
-/* 火箭 */
-
 .details .detail_bg::after {
+    top: -250px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_Rocket.png);
     background-repeat: no-repeat;
+    background-size: 120px auto;
     background-position: center 0%;
-}
-
-
-
-
-.details .detail_bg::after {
-    top: -220px;
-    background-size: 120px auto;
-}
-
-.details .detail_bg::after {
-    top: -10px;
-    background-size: 120px auto;
 }
 
 .details::after {
     height: 300px;
-    bottom: -290px;
+    bottom: -300px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/Mission_TopClould_repeat.png);
     background-repeat: repeat-x;
     background-size: 760px auto;
 }
 
 .details .detail_bg::before {
-    top: -110px;
+    top: -120px;
     background-image: url(./切版用圖-20220520T072434Z-001/切版用圖/KV_RocketCloudWhite_repeat.png);
     background-repeat: repeat-x;
     background-size: 600px auto;
     background-position: center 0%;
 }
 
-
 .details .detail_content {
     width: 100%;
     z-index : 1;
     position: relative;
     padding-bottom: 65px;
-    background-color: var(--pg-bg-1);
-
-    line-height: var(--lh-1-lg);
-    text-align: center;
-    font-weight: 500;
-    font-size: var(--body-lg);
-
-  }
-
-  .details .detail_content p:last-child {
-    font-size: var(--body-xs);
-    font-weight: 200;
-    margin-top: 10px;
-  }
+    background-color: #fff;
+}
 
 /* section 3 */
 /* —————————————————————————— */
@@ -497,53 +453,106 @@ a {
 }
 
 
-/* section 5*/
+/* footer */
 /* —————————————————————————— */
 .footer {
     text-align: center;
     font-size: 1.4rem;
     padding: 30px 10px 50px 10px;
     box-sizing: border-box;
+    /* margin: 0 0 10px 0; */
     background-color: var(--ft-bg-1);
 
 }
 
-.footer .footer_content p {
-    line-height: var(--lh-1-xs);
-}
-
 .footer .footer_title,
 .footer .footer_content,
-.footer .footer_content p+p {
+.footer .footer_content p {
     margin-bottom: 20px;
 }
 
 .footer .footer_title {
-    font-weight: 700;
-    font-size: var(--title-md);
+    font-size: 3rem;
 }
 
 .footer .contact_no {
-    font-weight: 500;
     margin: 20px 0 20px 0;
-    color: var(--ft-color-1);
+    font-size: 2rem;
+    color: #ff0;
 }
 
 
 .footer .footer_content {
-    border-bottom: 1px solid var(--link-color-1);
+    border-bottom: 1px solid var(--hv-left-nav-txt);
 }
 
+
+/* Mobile Phone <= 375px */
+@media screen and (max-width: 375px) {
+
+    .header .logo img{
+        width: 60%;
+    }
+
+    .intro .kv_content,
+    .details .detail_content,
+    .missions .mission_bg_t,
+    .missions .mission_bg_b,
+    .missions .mission_content {   
+        margin: auto;
+        width: 90%;
+    }
+
+    .btn {
+        padding-top: 30px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .details::after {
+        background-size: 380px auto;
+    }
+
+    .details .detail_bg::after {
+        top: -130px;
+        background-size: 70px auto;
+    }
+
+    .footer .footer_content {
+        font-size: 1.4rem;
+    }
+
+    .footer .footer_title strong {
+        
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .footer .footer_content .contact_no {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .footer .contact_no a {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .missions .mission_content .mission_title {
+        top: 20px;
+        position: relative;
+    }
+
+}
 
 /* Mobile Phone */
 @media screen and (max-width: 767px) {
 
-/* header */
     .header .main_logo {
         top: 0;
         position: fixed;
         border-bottom: 5px solid #fff;
-        background-color: var(--hv-nav-bg-3);
+        background-color: var(--hv-left-nav-bg);
     }
 
     .header .main_logo .logo {
@@ -589,80 +598,10 @@ a {
     }
 
     .main_nav ul li:hover {
-        background-color: var(--hv-nav-bg-2);
+        background-color: #FF5E79;
     }
 
-    .detail_content time {
-        display: block;
-    }
-
-    .details .detail_bg::after {
-        top: -220px;
-        background-size: 120px auto;
-    }
-
-    .footer .footer_title {
-        font-size: var(--title-xs);
-    }
-
-    .footer .contact_no {
-        font-size: var(--sub-title-xs);
-    }
-
-    .footer a {
-        color: inherit;
-    }
        
-}
-
-/* Mobile Phone <= 375px */
-@media screen and (max-width: 375px) {
-
-    .intro .kv_content,
-    .details .detail_content,
-    .missions .mission_bg_t,
-    .missions .mission_bg_b,
-    .missions .mission_content {   
-        margin: auto;
-        width: 90%;
-    }
-
-    .btn {
-        padding-top: 30px;
-        margin: auto;
-        width: 90%;
-    }
-/* header */
-    .header .logo img{
-        width: 60%;
-    }
-
-/* section 2 */
-    .details::after {
-        background-size: 380px auto;
-    }
-
-    .details .detail_bg::after {
-        top: -140px;
-        background-size: 70px auto;
-    }
-
-/* section 5 */
-    .footer .contact_no,
-    .footer .footer_content {
-        font-size: var(--body-xs);
-        white-space: nowrap;
-    }
-
-    .footer .contact_no a {
-        margin-top: 10px;
-    }
-
-    .missions .mission_content .mission_title {
-        top: 20px;
-        position: relative;
-    }
-
 }
 
 /* Tablet */
@@ -672,30 +611,25 @@ a {
         width: 60%;
     }
  
-/* header */
+
     .header .logo img {
         width: 55%;
     }
     
     .main_nav ul li a{
-        font-size: clamp(var(--nav-mnm), 
-                         var(--nav-standard),
-                         var(--nav-mxm)); 
+        font-size: clamp(1.2rem, 1.5rem, 1.8rem); 
         white-space: nowrap;
         display: block;
         padding: 10px 25px;
     }
 
-    .main_nav ul li {
-        border-radius: 25px;
-    }
-
     .main_nav ul li:hover {
-        background-color: var(--link-color-1);
+        border-radius: 25px;
+        background-color: var(--hv-left-nav-txt);
     }
     
     .main_nav ul li:hover  a{
-        color: var(--hv-nav-bg-3);
+        color: var(--hv-left-nav-bg);
     }
 
 /* section 1 */
@@ -703,10 +637,6 @@ a {
     .intro .kv_bg::after,
     .intro .kv_box .row::after {
         padding-bottom: 38%;
-    }
-
-    .intro .kv_title::after {
-        padding-bottom: 23.33333%;
     }
 
     .kv_content .kv_box .col {
@@ -759,27 +689,12 @@ a {
         100% {top:80px;}
       }
 
-/*section 2 */
-
-    .details .detail_bg::after {
-        top: -220px;
-        background-size: 120px auto;
-    }
-    .details .detail_content {
-        font-size: var(--body-lg);
-    }
-
-    .details .detail_content p:last-child {
-        font-size: var(--body-lg);
-    }
-
-    .detail_content time {
-        margin-bottom: 10px;
-        display: inline-block;
-    }
+      .details .detail_bg::after  {
+          top: -200px;
+          background-size: 100px auto;
+      }
 
 /* section 2 */
-
     .details .detail_title {
         width: 50%;
     }
@@ -846,35 +761,8 @@ a {
 
     .mission_box .row .col:nth-child(7) .item img {
         width: 42%;
-        top : 70%;
+        top : 75%;
         left: 45%;
-    }
-
-/* section 5 */
-    .footer .footer_title {
-        font-size: var(--title-lg);
-    }
-
-    .footer .contact_no {
-        font-size: var(--sub-title-lg);
-    }
-
-    .footer .footer_content {
-        width: 100%;
-        margin: auto;
-        color: var(--ft-color-2);
-    }
-
-    .footer .footer_title {
-        width: 50%;
-        float: left;
-    }
-
-    .footer .footer_content p  {
-        width: 50%;
-        float: left;
-        text-align: left;   
-        line-height: var(--lh-1-lg);
     }
     
 }
