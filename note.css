@@ -31,8 +31,12 @@ body {
 }
 
 .event_box li:nth-child(1) p,
-.event_box li:nth-child(11) p {
+.event_box li:nth-child(11) {
     margin-bottom: 50px;
+}
+
+.event_box li:nth-child(3) span {
+    display: block;
 }
 
 .event_box li {
@@ -48,8 +52,9 @@ body {
     font-size: var(--body-lg);
 }
 
-.event_box p {
+.event_box li {
     padding-left: 50px;
+    text-align: justify;
 }
 
 .event_box li:nth-child(-1n + 2) {
@@ -57,10 +62,6 @@ body {
 
 }
 
-/* .event_box li:nth-child(1) p {
-    margin-bottom: 30px;
-
-} */
 .event_box .item .table th,
 .event_box .item .table td {
     padding: 15px;
