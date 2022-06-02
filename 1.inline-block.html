@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset/reset.css">
-    <link rel="stylesheet" href="./style4.css">
+    <link rel="stylesheet" href="./1.inline-block.css">
     <title>金魚切版挑戰</title>
 </head>
 <body>
-    
+
     <header class="header">
         <div class="mw-1200">
-            <div class="main_logo">
+            <div class="main_header">
                 <div class="logo" >
                     <a href="#">
                         <h1>
                             <img src="./切版用圖-20220520T072434Z-001/切版用圖/Nav_Logo.png" alt="Amos & CSScoke Logo">
-                            <span class="sr-only">Amos & CSScoke Logo</span>
+                            <span class="sr-only">Amos & CSScoke</span>
                         </h1>
                     </a>
                 </div>
                 <nav class="main_nav">
                     <h2 class="sr-only">頁面導覽</h2>
                     <ul>
-                        <li><a href="./index4.html">闖關公告</a></li>
-                        <li><a href="#">任務佈告欄</a></li>
-                        <li><a href="./notes.html">注意事項</a></li>
+                        <li>
+                            <a href="#trigger_detail">闖關公告</a>
+                        </li>
+
+                        <li>
+                            <a href="#trigger_mission">任務佈告欄</a>
+                        </li>
+
+                        <li>
+                            <a href="./notes.html">注意事項</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -52,25 +60,25 @@
                 </div>
                 <div class="container kv_box">
                     <div class="row">
-                        <div class="col col-xs-2 col-lg-5">
+                        <div class="col">
                             <div class="item stick">
                                 <img src="./切版用圖-20220520T072434Z-001/切版用圖/KV_GiftStick.png" alt="一路平安狼牙棒">
                             </div>
                         </div>
 
-                        <div class="col col-xs-2 col-lg-5">
+                        <div class="col">
                             <div class="item coco">
                                 <img src="./切版用圖-20220520T072434Z-001/切版用圖/KV_GiftCoco.png" alt="寫扣專用飲料杯">
                             </div>
                         </div>
 
-                        <div class="col col-xs-2 col-lg-5">
+                        <div class="col">
                             <div class="item brick">
                                 <img src="./切版用圖-20220520T072434Z-001/切版用圖/KV_GiftBrick.png" alt="醒腦磚頭">
                             </div>
                         </div>
 
-                        <div class="col col-xs-2 col-lg-5">
+                        <div class="col">
                             <div class="item coco">
                                 <img src="./切版用圖-20220520T072434Z-001/切版用圖/KV_GiftShark.png" alt="出奇不異鯊魚頭">
                             </div>
@@ -91,7 +99,7 @@
     <section class="details w-100">
         <div class="detail_bg"></div>
         <div class="mw-1200">
-            <div class="detail_content">
+            <div class="detail_content" id="trigger_detail">
                 <div class="detail_title">
                     <h2 class="title">
                         <span class="sr-only">闖關公告</span>
@@ -106,10 +114,10 @@
                 
                 <div class="container detail_box">
                     <div class="row">
-                        <div class="col col-xs-1 col-lg-2">
+                        <div class="col">
                             <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_Star.png" alt="">
                         </div>
-                        <div class="col col-xs-1 col-lg-2">
+                        <div class="col">
                             <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_BigStar.png" alt="">
                         </div>
                     </div>
@@ -125,7 +133,7 @@
     </section> 
 
     <!-- 3 -->
-    <section class="missions w-100 cover">
+    <section class="missions w-100 cover" for="section_check">
         <div class="mw-1200">
                 <div class="mission_bg_t">
                     <picture>
@@ -140,7 +148,7 @@
                         <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_BgimageBody_repeat-xs_h2625.png" alt="背景圖片">
                     </picture>
                 </div>
-                <div class="mission_content">
+                <div class="mission_content" id="trigger_mission">
                     <div class="mission_title">
                         <h2 class="title">
                             <span class="sr-only">任務佈告欄</span>
@@ -155,80 +163,74 @@
                     <div class="container mission_box">
                         <ul class="row">
                             <li class="col">
-                                <h3 class="sr-only">HTML標簽</h3>
-
-                                <p class="sr-only">解析版面内容的結構，使用符合語意的標簽，良好的所拍習慣，命名原則一致</p>
-
-                                <picture class="item">
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentHTML-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentHTML-xs.png" alt="HTML標簽">
-                                </picture>
+                                <a href=" https://ithelp.ithome.com.tw/users/20112550/ironman/2072">
+                                    <h3 class="sr-only">HTML標簽</h3>
+                                    <p class="sr-only">解析版面内容的結構，使用符合語意的標簽，良好的所拍習慣，命名原則一致</p>
+                                    <picture class="item">
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentHTML-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentHTML-xs.png" alt="HTML標簽">
+                                    </picture>
+                                </a>
                             </li>
                             <li class="col">
-                                <picture class="item">
-                                    <h3 class="sr-only">CSS樣式表</h3>
-
-                                    <p class="sr-only">引入的方式和層曡性，選取器和屬性的基本特性，不同來源的規則優先順序</p>
-
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCSS-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCSS-xs.png" alt="CSS 樣式表">
-                                </picture>
+                                <a href="https://ithelp.ithome.com.tw/articles/10203330">
+                                    <picture class="item">
+                                        <h3 class="sr-only">CSS樣式表</h3>
+                                        <p class="sr-only">引入的方式和層曡性，選取器和屬性的基本特性，不同來源的規則優先順序</p>
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCSS-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCSS-xs.png" alt="CSS 樣式表">
+                                    </picture>
+                                </a>
                             </li>
                             <li class="col">
-                                <picture class="item">
-                                    <h3 class="sr-only">區塊尺寸計算</h3>
-
-                                    <p class="sr-only">盒模型有哪些？可見尺寸/占據空間/margin/Padding</p>
-
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentBoxsize-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentBoxsize-xs.png" alt="區塊尺寸計算">
-                                </picture>
+                                <a href="https://ithelp.ithome.com.tw/articles/10204303">
+                                    <picture class="item">
+                                        <h3 class="sr-only">區塊尺寸計算</h3>
+                                        <p class="sr-only">盒模型有哪些？可見尺寸/占據空間/margin/Padding</p>
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentBoxsize-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentBoxsize-xs.png" alt="區塊尺寸計算">
+                                    </picture>
+                                </a>
                             </li>
                             <li class="col">
-                                <picture class="item">
-                                    <h3 class="sr-only">Float與Flex</h3>
-
-                                    <p class="sr-only">各有什麽特性？瀏覽器支援度</p>
-
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentFloatFlex-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentFloatFlex-xs.png" alt="Float與Flex">
-                                </picture>
+                                <a href="https://ithelp.ithome.com.tw/articles/10204629">
+                                    <picture class="item">
+                                        <h3 class="sr-only">Float與Flex</h3>
+                                        <p class="sr-only">各有什麽特性？瀏覽器支援度</p>
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentFloatFlex-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentFloatFlex-xs.png" alt="Float與Flex">
+                                    </picture>
+                                </a>
                             </li>
                             <li class="col">
-                                <picture class="item">
-                                    <h3 class="sr-only">定位</h3>
-
-                                    <p class="sr-only">Fixed/Relative/Absolute的特性</p>
-
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentPosition-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentPosition-xs.png" alt="定位">
-                                </picture>
+                                <a href="https://ithelp.ithome.com.tw/articles/10206321">
+                                    <picture class="item">
+                                        <h3 class="sr-only">定位</h3>
+                                        <p class="sr-only">Fixed/Relative/Absolute的特性</p>
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentPosition-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentPosition-xs.png" alt="定位">
+                                    </picture>
+                                </a>
                             </li>
                             <li class="col">
-                                <picture class="item">
-                                    <h3 class="sr-only">Inline與Block</h3>
-                                    <p class="sr-only">各有什麽特性？inline-block特性、HTML標簽的預設特性</p>
-
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentInlineBlock-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentInlineBlock-xs.png" alt="Inline與Block">
-                                </picture>
+                                <a href="https://ithelp.ithome.com.tw/articles/10204956">
+                                    <picture class="item">
+                                        <h3 class="sr-only">Inline與Block</h3>
+                                        <p class="sr-only">各有什麽特性？inline-block特性、HTML標簽的預設特性</p>
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentInlineBlock-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentInlineBlock-xs.png" alt="Inline與Block">
+                                    </picture>
+                                </a>
                             </li>
                             <li class="col">
-                                <picture class="item">
-                                    <h3 class="sr-only">垂直置中23法</h3>
-
-                                    <p class="sr-only">你的基礎觀念夠清楚嗎？<span class="reward">完成本巨星任務，有機會增加20%切版不被雷機率！</span></p>
-
-                                    <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCenterMiddle-lg.png" media="(min-width: 768px)">
-        
-                                    <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCenterMiddle-xs.png" alt="垂直置中23法">
-                                </picture>
+                                <a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2092">
+                                    <picture class="item">
+                                        <h3 class="sr-only">垂直置中23法</h3>
+                                        <p class="sr-only">你的基礎觀念夠清楚嗎？<span class="reward">完成本巨星任務，有機會增加20%切版不被雷機率！</span></p>
+                                        <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCenterMiddle-lg.png" media="(min-width: 768px)">
+                                        <img src="./切版用圖-20220520T072434Z-001/切版用圖/Mission_Star_ContentCenterMiddle-xs.png" alt="垂直置中23法">
+                                    </picture>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -261,10 +263,11 @@
                 <div class="footer_title">
                     <h4>金魚切版 基礎先跟上</h4>
                 </div>
-                <p>請記住「要求自己」是基本條件</p>
-                <p>本版只提供Amos課程學員進行切版使用</p>
+                <div class="footer_box">
+                    <p><span>請記住「要求自己」是基本條件</span>本版只提供Amos課程學員進行切版使用</p>
+                </div>
             </div>
-            <address class="contact_no">
+            <address class="contact">
                 <p class="phone_no">
                     暴力服務專線：
                     <a href="#">0800-945-945</a>

@@ -6,38 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聚星禮遇</title>
     <link rel="stylesheet" href="./reset/reset.css">
-    <link rel="stylesheet" href="./style4.css">
+    <link rel="stylesheet" href="./1.inline-block.css">
     <link rel="stylesheet" href="./note.css">
 </head>
 <body>
+    <!-- 1 -->
     <header class="header">
         <div class="mw-1200">
-            <div class="main_logo">
+            <div class="main_header">
                 <div class="logo" >
-                    <a href="#">
+                    <a href="./1.inline-block.html">
                         <h1>
-                            <img src="./切版用圖-20220520T072434Z-001/切版用圖/Nav_Logo.png" alt="">
+                            <img src="./切版用圖-20220520T072434Z-001/切版用圖/Nav_Logo.png" alt="Amos & CSScoke Logo">
+                            <span class="sr-only">Amos & CSScoke</span>
                         </h1>
                     </a>
                 </div>
                 <nav class="main_nav">
+                    <h2 class="sr-only">頁面導覽</h2>
                     <ul>
-                        <li><a href="./index4.html">闖關公告</a></li>
-                        <li><a href="#">任務佈告欄</a></li>
-                        <li><a href="./notes.html">注意事項</a></li>
+                        <li>
+                            <a href="./1.inline-block.html#trigger_detail">闖關公告</a>
+                        </li>
+
+                        <li>
+                            <a href="./1.inline-block.html#trigger_mission">任務佈告欄</a>
+                        </li>
+
+                        <li>
+                            <a href="./notes.html">注意事項</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <article class="events">
-        <section class="event mw-1200">
-
+    <!-- 2 -->
+    <main class="events">
+        <article class="event mw-1200">
             <div class="event_content">
                 <div class="event_title">
                     <h2>聚星禮遇</h2>
-                    <span>活動注意事項</span>
+                    <h3>活動注意事項</h3>
                 </div>
                 <ol class="event_box">
                     <!-- 1 -->
@@ -137,19 +148,21 @@
                     </li>
                 </ol>
             </div>
-        </section>
-    </article>
+        </article>
+    </main>
 
+    <!-- 3 -->
     <footer class="footer w-100">
         <div class="mw-1200">
             <div class="footer_content">
                 <div class="footer_title">
-                    <strong>金魚切版 基礎先跟上</strong>
+                    <h4>金魚切版 基礎先跟上</h4>
                 </div>
-                <p>請記住「要求自己」是基本條件</p>
-                <p>本版只提供Amos課程學員進行切版使用</p>
+                <div class="footer_box">
+                    <p><span>請記住「要求自己」是基本條件</span>本版只提供Amos課程學員進行切版使用</p>
+                </div>
             </div>
-            <address class="contact_no">
+            <address class="contact">
                 <p class="phone_no">
                     暴力服務專線：
                     <a href="#">0800-945-945</a>
