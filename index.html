@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="btn detail_btn">
-                <a href="#">
+                <a href="#trigger_mission">
                     <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_Button.png" alt="前往星星出任務 按鈕">
                 </a>
             </div>
@@ -242,7 +242,7 @@
     <div class="notices w-100 cover">
         <div class="mw-1200">
             <div class="btn notice_btn">
-                <a href="#">
+                <a href="./notes.html">
                     <img src="./切版用圖-20220520T072434Z-001/切版用圖/Notice_Button.png" alt="活動注意事項 按鈕">
                 </a>
             </div>
@@ -275,5 +275,10 @@
             </address>
         </div>
     </footer>
+
+    <script>
+        const nav_Height = document.querySelector(".main_nav").getBoundingClientRect().height;
+        document.documentElement.style.setProperty("--scroll-padding", nav_Height + "px");
+    </script>
 </body>
 </html>

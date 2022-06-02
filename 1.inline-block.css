@@ -22,7 +22,7 @@
 
 /*font*/
     /* body-size 10pt*/
-    font-size: 62.5%; /*10p x/ 16px 100%*/
+    font-size: 62.5%; /*10px / 16px 100%*/
 
     /*font-size*/
     --nav-mnm: 1.2rem;
@@ -70,7 +70,10 @@
 
 /* —————————————————————————— */
 /* ===P1=== */
-html {scroll-behavior: smooth}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 50px);
+}
 
 body {
     overflow-x: hidden;
@@ -122,10 +125,10 @@ a {
 
 /* btn */
 .btn {
-    z-index: 2;
     width: 80%;
-    margin: auto;
+    z-index: 2;
     position: relative;
+    margin: auto;
     filter: brightness(100%);
     transition: .3s ease-in;
 }
@@ -152,16 +155,6 @@ a {
 	overflow: hidden;
 }
 
-
-/* clear-fix */
-.intro .kv_box .row::after,
-.details .detail_box .row::after,
-.footer .footer_content::after {
-   content: "";
-   display: block;
-   clear: left;
-}
-
 /* -----end------ */
 
 
@@ -184,13 +177,6 @@ a {
     padding: 10px;
     box-sizing: border-box;
     font-size: 0;
-}
-
-
-.header .main_header .logo,
-.header .main_nav ul li {
-    vertical-align: middle;
-    display: inline-block;
 }
 
 /* section 1 */
@@ -266,8 +252,6 @@ a {
     position: relative;
 }
 
-
-/* set column*/
 .detail_box .row .col {
     width: 100%;
 }
@@ -293,7 +277,6 @@ a {
     background-repeat: no-repeat;
     background-position: center 0%;
 }
-
 
 .details .detail_bg::after {
     top: -220px;
@@ -475,12 +458,12 @@ a {
     padding: 50px 0;
     box-sizing: border-box;
     background-color: var(--ft-bg-1);
-
 }
 
-.footer_content {
-    box-sizing: border-box;
-
+.footer .footer_content {
+    width: 100%;
+    color: var(--ft-color-2);
+    border-bottom: 1px solid var(--link-color-1);
 }
 
 .footer .footer_title,
@@ -493,10 +476,6 @@ a {
 .footer .footer_title {
     font-weight: 700;
     font-size: var(--title-md);
-}
-
-.footer .footer_content {
-    border-bottom: 1px solid var(--link-color-1);
 }
 
 .footer .footer_content .footer_box {
@@ -514,11 +493,21 @@ a {
     margin: 20px 0 20px 0;
 }
 
+.footer .contact,
+.footer .contact a {
+    color: var(--ft-color-1);
+}
+
+.footer .contact .phone_no a:hover {
+    color: var(--ft-color-3);
+    transition: .3s ease-in;
+}
+
+
 /* Mobile Phone */
 @media screen and (max-width: 767px) {
 
 /* header */
-
     .header .main_header .logo {
         padding-left: 25%;
         padding-right: 25%;
@@ -624,6 +613,7 @@ a {
         margin: auto;
         width: 90%;
     }
+
 /* header */
     .header .logo img{
         width: 60%;
@@ -656,24 +646,27 @@ a {
  
 /* header */
     .header .logo img {
-        width: 55%;
+        width: 50%;
+        vertical-align: middle;
     }
 
     .header .main_header .logo {
-        width: 50%;
+        /* 120px * 50% */
+        line-height: 60px;
     }
-    
-    .header .main_nav {
+
+
+    .header .main_header .logo,
+    .header .main_header .main_nav {
         width: 50%;
         display: inline-block;
-        text-align: right;
-        font-size: 0;
+        vertical-align: middle;
     }
     
-    .header .logo img {
-        width: 50%;
-        margin: auto;
+    .header .main_header .main_nav {
+        text-align: right;
     }
+
     
     .main_nav ul li a{
         font-size: clamp(var(--nav-mnm), 
@@ -681,12 +674,13 @@ a {
                          var(--nav-mxm)); 
         white-space: nowrap;
         display: block;
-        box-sizing: border-box;
         padding: 10px 25px;
+        box-sizing: border-box;
     }
 
     .main_nav ul li {
         border-radius: 25px;
+        display: inline-block;
     }
 
     .main_nav ul li:hover {
@@ -750,7 +744,6 @@ a {
       }
 
 /*section 2 */
-
     .details .detail_bg::after {
         top: -240px;
         background-size: 140px auto;
@@ -769,7 +762,6 @@ a {
     }
 
 /* section 2 */
-
     .details .detail_title,
     .details .detail_box .col {
         width: 50%;
@@ -846,44 +838,23 @@ a {
     }
 
 /* section 5 */
-    .footer .footer_content {
-        width: 100%;
-        color: var(--ft-color-2);
-    }
-
     .footer .footer_content .footer_title,
     .footer .footer_content .footer_box {
         width: 40%;
         padding-left: 10%;
         display: inline-block;
-        box-sizing: border-box;
         vertical-align: top;
         font-size: var(--title-lg);
     }
 
     .footer .contact,
     .footer .contact a {
-        color: var(--ft-color-1);
         font-size: var(--sub-title-lg);
     }
-
 
     .footer .footer_content .footer_box {
         text-align: left;  
         vertical-align: top;
         font-size: var(--body-lg);
-    }
-
-    .footer .contact .phone_no a:hover {
-        color: var(--ft-color-3);
-        transition: .3s ease-in;
-    }
-
-    
+    } 
 }
-
-/* Desktop */
-@media screen and (min-width: 2000px) {
-    
-}
-
