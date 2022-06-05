@@ -90,7 +90,7 @@
         <div class="kv_bg">
             <picture>
                 <source srcset="./切版用圖-20220520T072434Z-001/切版用圖/KV_Bgimage-lg.png" media="(min-width: 768px)">
-                <img src="./切版用圖-20220520T072434Z-001/切版用圖/KV_Bgimage-xs.png" alt="">
+                <img src="./切版用圖-20220520T072434Z-001/切版用圖/KV_Bgimage-xs.png" alt="背景圖片">
             </picture>
         </div>
     </section>
@@ -109,16 +109,26 @@
                             <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_Title-xs.png" alt="闖關公告">
                         </picture>
                     </h2>
-                    <p class="sub_title"><time>即日起~108/01/31</time>Amos暴力切版入門班全體同學皆可參加</p>
+                    <p class="sub_title"><time datetime="2019-01-31">即日起~108/01/31</time>Amos暴力切版入門班全體同學皆可參加</p>
                 </div>
                 
                 <div class="container detail_box">
                     <div class="row">
                         <div class="col">
-                            <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_Star.png" alt="">
+                            <div class="item">
+                                <span class="sr-only">星星任務贈好禮</span>
+                                <p class="sr-only">每完成意向星星任務可獲得<span>一次經驗纍積</span><span>Amos親自code review</span></p>
+
+                                <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_Star.png" alt="星星任務贈好禮">
+                            </div>
                         </div>
                         <div class="col">
-                            <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_BigStar.png" alt="">
+                            <div class="item">
+                                <span class="sr-only">巨星任務加碼</span>
+                                <p class="sr-only">完成巨星任務垂直置中23法，有機會增加<span class="reward">20%切版不被雷機率</span>  </p>
+
+                                <img src="./切版用圖-20220520T072434Z-001/切版用圖/Description_BigStar.png" alt="巨星任務享加碼">
+                            </div>
                         </div>
                     </div>
                     <p>*貼心提醒：此切版練習作業，不可當作作品集展示吆</p>
@@ -270,14 +280,14 @@
             <address class="contact">
                 <p class="phone_no">
                     暴力服務專線：
-                    <a href="#">0800-945-945</a>
+                    <a href="tel: +0800-945-945">0800-945-945</a>
                 </p>
             </address>
         </div>
     </footer>
 
     <script>
-        const nav_Height = document.querySelector(".main_nav").getBoundingClientRect().height;
+        const nav_Height = Math.ceil(document.querySelector(".main_nav").offsetHeight);
         document.documentElement.style.setProperty("--scroll-padding", nav_Height + "px");
     </script>
 </body>
